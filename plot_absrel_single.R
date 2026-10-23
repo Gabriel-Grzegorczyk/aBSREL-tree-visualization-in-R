@@ -1,4 +1,4 @@
-# aBSREL tree visualization: one external tree and one JSON file per run.
+# aBSREL tree visualization: one tree and one JSON file per run.
 # Edit USER SETTINGS below, then run the entire script. See README.md.
 # Adapted from https://github.com/weikevinhc/kakstree (hyphy.tree).
 # Original reference: Zakerzade et al. (2025), doi:10.1371/journal.pgen.1011549.
