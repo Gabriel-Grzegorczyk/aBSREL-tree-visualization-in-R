@@ -10,7 +10,7 @@ Adaptation by **Gabriel Valaski Grzegorczyk**. Changes include branch matching b
 
 ## What it does
 
-The script plots one external Newick tree using existing HyPhy aBSREL JSON results. It generates a clean PDF without a legend and optionally exports a branch-level CSV. It does not run aBSREL or recalculate statistical tests.
+The script plots the Newick tree used to run aBSREL using existing HyPhy aBSREL JSON results. It generates a clean PDF without a legend and optionally exports a branch-level CSV. It does not run aBSREL or recalculate statistical tests.
 
 - **Colors:** baseline MG94×REV omega, clipped to [0.1, 10] and log10-transformed. Colors do not represent the full aBSREL omega-class distribution.
 - **Asterisks:** `*` for 0.01 ≤ corrected p < 0.05 and `**` for corrected p < 0.01 by default.
@@ -21,7 +21,7 @@ The script plots one external Newick tree using existing HyPhy aBSREL JSON resul
 | File | Description |
 | --- | --- |
 | `plot_absrel_single.R` | Single-file plotting script |
-| `CYP9R_geneTree.newick` | Example CYP9R tree |
+| `CYP9R_geneTree.newick` | Example CYP9R tree (use the tree used to run aBSREL)|
 | `CYP9R_CDS_ALINHADO_ABSREL.JSON` | Example aBSREL results |
 
 The tree and JSON reproduce the visualization. Rerunning aBSREL also requires the codon alignment and analysis settings.
@@ -54,7 +54,3 @@ The external tree and JSON must have matching tip sets and compatible descendant
 ```r
 subset(result$branches, !matched | omega_missing | p_missing)
 ```
-
-## License status
-
-Upstream redistribution terms remain to be clarified. No new license is asserted over the original code; citation does not replace permission to redistribute it.
